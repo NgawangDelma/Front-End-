@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header{
+    background-color: rgb(215, 213, 213);
+    text-align: center;
+}
+header>h1{
+    font-size: 24px;
+}
+.container{
+    border-width: 1px;
+    padding: 20px;
+}
+p{
+    color: blue;
+}
+ul{
+    color: green;
+}
+img{
+    border-radius: 5px;
+}
+
+img#sample-image{
+    border-color: 2px solid red;
+}
+
+.main-container>.paragraphs{
+    background-color: yellow;
+}
+.list-items{
+    font-weight: bold;
+}
+#container{
+    background-color: rgb(214, 214, 214);
+}
+p ~ ul {
+    color: purple;
+  }
+  

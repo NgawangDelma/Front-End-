@@ -1,0 +1,43 @@
+/* Responsive layout - when the screen is less than 1000px wide */
+/* @media screen and (max-width: 1000px) {
+    .leftcolumn{
+    float: left;
+    width:30%;
+    }
+    .middlecolumn{
+    float: left;
+    width: 70%;
+    }
+    .rightcolumn{
+    float: left;
+    width: 100%;
+    padding-right: 5px;
+    }
+    .about, .follow{
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+    }
+    }
+    /* Responsive layout - when the screen is less than 600px wide */
+    /* @media screen and (max-width: 600px) {
+    .leftcolumn, .middlecolumn, .about, .follow {
+    float: left;
+    width: 100%;
+    }
+    }  */
+
+
+.grid-container {
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+}
+      
+.grid-container > div {
+        background-color: gray;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 30px;
+        grid-area: 1/2/span 2/span 2;
+}

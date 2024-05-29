@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            margin-left: 50px;
+            background-image: linear-gradient(#ff0000, #ffff00);
+            box-shadow: 8px 8px 4px 2px gray;
+            text-shadow: 5px 5px 9px rgb(225, 255, 0);
+            transition: background-color 2s ease-out;
+            transition:2s;
+  
+
+        }
+        .box:hover{
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+        .box:active{
+            transform: translate3d(70px, 50px, 45px);
+            background-image:radial-gradient(#ff0000, #ff8000, #ffff00);
+            cursor: pointer;
+        }
+        .text{
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="text">Sumertime Sadness</p>
+    </div>
+</body>
+</html>
+
+
+

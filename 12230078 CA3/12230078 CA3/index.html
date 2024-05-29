@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="logo">
+                            <img src="./assets/gcitlogo.png" alt="logo of gcit">
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Academic</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Non-Academic</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Student Services</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Announcement</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">About Us</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/user.JPG" alt="user profile">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">396</div>
+                        <div class="cardName">Total Students</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">176</div>
+                        <div class="cardName">Female</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-person-dress"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">220</div>
+                        <div class="cardName">Male</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">8</div>
+                        <div class="cardName">Chefs</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="graphs1">
+                    <img src="./assets/1.png" alt="monthly spending">
+                </div>
+                <div class="graphs2">
+                    <img src="./assets/2.png" alt="yearly spending">
+                </div>
+            </div>
+            <div class="container2">
+                <div class="details">
+                    <div class="meal">
+                        <div class="cardHeader">
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Day</td>
+                                    <td>Breakfast</td>
+                                    <td>Lunch</td>
+                                    <td>Dinner</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>Chana Fried Rice</td>
+                                    <td>Kewa Datshi</td>
+                                    <td>Nutella Curry</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>Plain Rice Ezay</td>
+                                    <td>Kewa & Nutella</td>
+                                    <td>Pumpkin Curry</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>Rice Porridge</td>
+                                    <td>Chicken Curry / Mushroom Datshi</td>
+                                    <td>Potato Fry</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>Vegetable Fried Rice</td>
+                                    <td>Potato Mix Veg Curry</td>
+                                    <td>Carrot Datshi</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>Chana Fried Rice</td>
+                                    <td>Raddsih with Beef/ Panner Fry</td>
+                                    <td>Nutella Curry</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>Plain Rice with Suja</td>
+                                    <td>Potato & Spinach Curry</td>
+                                    <td>Panner Fry</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Vegetable Fried Rice</td>
+                                    <td>Mix Vegetable Curry</td>
+                                    <td>Mushroom Datshi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container3">
+                <div class="box4">
+                    <img src="./assets/4.png" alt="miss meal ">
+                </div>
+                <div class="box3">
+                    <img src="./assets/3.png" alt="food waste ">              
+                </div>
+            </div>
+
+            <!-- <div class="lastrow">
+                
+                <div class="form-container my-5">
+                    <form class="row g-3 EventsForm">
+                        <div class="col-md-6">
+                            <label for="name" style="margin-left: 2rem;">Name</label>
+                            <input type="text" id="name" class="inputfield" required>
+                        </div>
+                
+                        <div class="col-md-6">
+                            <label for="image" style="margin-left: 2rem;">Image</label>
+                            <input type="file" id="image" style="width: 100px;">
+                        </div>
+                
+                        <div class="col-md-12">
+                            <label for="message"style="margin-left: 2rem;">Feedback</label>
+                            <textarea id="message" placeholder="Add a message" class="inputfield"></textarea>
+                        </div>
+                        
+                        <div class="col-12">
+                            <button type="submit" id="MessageSubmit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+              <!-- <input type="checkbox" id="toggleDashboard"> -->
+                <div class="blurry-dashboard" id="blurredDashboard">
+                <!-- Blurred version of the dashboard content -->
+                <img src="./assets/5.png" class="logo-dashboard" alt="logo">
+                     <h2 class="welcome-message">Welcome to GCIT's Mess Dashboard! </h2>
+                    <p class="subtitle">This is the (hypothetical;) mess dashboard for Gyalpozhing College of Information Technology where all the mess activities are being monitored and managed..</p>
+                    <button id="get-started-button">Get Started</button>
+                    <!-- <label for="toggleDashboard" class="get-started-button">Get Started</label> -->
+                </div>
+
+                </div>
+               
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/f2a011400f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

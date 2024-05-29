@@ -1,0 +1,540 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="practice.css" rel="stylesheet" /> 
+</head>
+<body>
+    <a href="index.html" class="styled-link">Linear Gradient</a>
+    <a href="conic.html" class="styled-link">Conic Gradient</a>
+    <h1>Radial Gradient</h1>
+    <div class="evenlyspaced">
+        <p>Evenly spaced</p>
+    </div>
+    <div class="differentlyspaced">
+        <p>Differently spaced</p>
+    </div>
+    <div class="normal">
+        <p>normal-side</p>
+    </div>
+     <div class="closest">
+        <p>Closest-side</p>
+    </div>
+    <div class="farther">
+        <p>farther-side</p>
+    </div>
+ 
+    <div class="closestcorner">
+        <p>close corner</p>
+    </div>
+    <div class="Farthercorner">
+        <p>far corner</p>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+width: 150px;
+height: 150px;
+background: #f6821f;
+margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
+transition: background-color 2s ease-out;
+transition:2s;
+}
+.box:hover {
+border-radius: 50%;
+transform: translate(50px, 50px);
+background-color: #002060;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Transformation Demo</title>
+<style>
+  #container {
+    width: 400px;
+    height: 400px;
+    perspective: 800px;
+    margin: 50px auto;
+  }
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .front { background-color: rgba(255, 0, 0, 0.6); transform: translateZ(50px); }
+  .back { background-color: rgba(0, 255, 0, 0.6); transform: translateZ(-50px) rotateY(180deg); }
+  .top { background-color: rgba(0, 0, 255, 0.6); transform: rotateX(90deg) translateZ(50px); }
+  .bottom { background-color: rgba(255, 255, 0, 0.6); transform: rotateX(-90deg) translateZ(50px); }
+  .left { background-color: rgba(255, 0, 255, 0.6); transform: rotateY(-90deg) translateZ(50px); }
+  .right { background-color: rgba(0, 255, 255, 0.6); transform: rotateY(90deg) translateZ(50px); }
+</style>
+</head>
+<body>
+<div id="container">
+  <div class="cube" id="cube">
+    <div class="face front">Front</div>
+    <div class="face back">Back</div>
+    <div class="face top">Top</div>
+    <div class="face bottom">Bottom</div>
+    <div class="face left">Left</div>
+    <div class="face right">Right</div>
+  </div>
+</div>
+
+<div>
+  <label for="rotateX">Rotate X:</label>
+  <input type="range" id="rotateX" min="-180" max="180" value="0">
+  <span id="rotateXValue">0</span>
+</div>
+<div>
+  <label for="rotateY">Rotate Y:</label>
+  <input type="range" id="rotateY" min="-180" max="180" value="0">
+  <span id="rotateYValue">0</span>
+</div>
+<div>
+  <label for="translateZ">Translate Z:</label>
+  <input type="range" id="translateZ" min="-200" max="200" value="0">
+  <span id="translateZValue">0</span>
+</div>
+<div>
+  <label for="scaleX">Scale X:</label>
+  <input type="range" id="scaleX" min="0.1" max="2" step="0.1" value="1">
+  <span id="scaleXValue">1</span>
+</div>
+<div>
+  <label for="scaleY">Scale Y:</label>
+  <input type="range" id="scaleY" min="0.1" max="2" step="0.1" value="1">
+  <span id="scaleYValue">1</span>
+</div>
+<div>
+  <label for="scaleZ">Scale Z:</label>
+  <input type="range" id="scaleZ" min="0.1" max="2" step="0.1" value="1">
+  <span id="scaleZValue">1</span>
+</div>
+<div>
+  <label for="skewX">Skew X:</label>
+  <input type="range" id="skewX" min="-45" max="45" value="0">
+  <span id="skewXValue">0</span>
+</div>
+<div>
+  <label for="skewY">Skew Y:</label>
+  <input type="range" id="skewY" min="-45" max="45" value="0">
+  <span id="skewYValue">0</span>
+</div>
+<div>
+  <label for="translateX">Translate X:</label>
+  <input type="range" id="translateX" min="-200" max="200" value="0">
+  <span id="translateXValue">0</span>
+</div>
+<div>
+  <label for="translateY">Translate Y:</label>
+  <input type="range" id="translateY" min="-200" max="200" value="0">
+  <span id="translateYValue">0</span>
+</div>
+
+<script>
+  const cube = document.getElementById('cube');
+
+  let rotateX = 0;
+  let rotateY = 0;
+  let translateZ = 0;
+  let scaleX = 1;
+  let scaleY = 1;
+  let scaleZ = 1;
+  let skewX = 0;
+  let skewY = 0;
+  let translateX = 0;
+  let translateY = 0;
+
+  function applyTransformations() {
+    cube.style.transform = `
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      translateZ(${translateZ}px)
+      scaleX(${scaleX})
+      scaleY(${scaleY})
+      scaleZ(${scaleZ})
+      skewX(${skewX}deg)
+      skewY(${skewY}deg)
+      translateX(${translateX}px)
+      translateY(${translateY}px)
+    `;
+  }
+
+  function updateSliderValue(id, value) {
+    document.getElementById(id).innerText = value;
+  }
+
+  document.getElementById('rotateX').addEventListener('input', function(event) {
+    rotateX = event.target.value;
+    updateSliderValue('rotateXValue', rotateX);
+    applyTransformations();
+  });
+
+  document.getElementById('rotateY').addEventListener('input', function(event) {
+    rotateY = event.target.value;
+    updateSliderValue('rotateYValue', rotateY);
+    applyTransformations();
+  });
+
+  document.getElementById('translateZ').addEventListener('input', function(event) {
+    translateZ = event.target.value;
+    updateSliderValue('translateZValue', translateZ);
+    applyTransformations();
+  });
+
+  document.getElementById('scaleX').addEventListener('input', function(event) {
+    scaleX = event.target.value;
+    updateSliderValue('scaleXValue', scaleX);
+    applyTransformations();
+  });
+
+  document.getElementById('scaleY').addEventListener('input', function(event) {
+    scaleY = event.target.value;
+    scaleY = event.target.value;
+    updateSliderValue('scaleYValue', scaleY);
+    applyTransformations();
+  });
+
+  document.getElementById('scaleZ').addEventListener('input', function(event) {
+    scaleZ = event.target.value;
+    updateSliderValue('scaleZValue', scaleZ);
+    applyTransformations();
+  });
+
+  document.getElementById('skewX').addEventListener('input', function(event) {
+    skewX = event.target.value;
+    updateSliderValue('skewXValue', skewX);
+    applyTransformations();
+  });
+
+  document.getElementById('skewY').addEventListener('input', function(event) {
+    skewY = event.target.value;
+    updateSliderValue('skewYValue', skewY);
+    applyTransformations();
+  });
+
+  document.getElementById('translateX').addEventListener('input', function(event) {
+    translateX = event.target.value;
+    updateSliderValue('translateXValue', translateX);
+    applyTransformations();
+  });
+
+  document.getElementById('translateY').addEventListener('input', function(event) {
+    translateY = event.target.value;
+    updateSliderValue('translateYValue', translateY);
+    applyTransformations();
+  });
+
+  applyTransformations(); // Initial transformation
+</script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+width: 150px;
+height: 150px;
+background: #f6821f;
+margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
+transition: background-color 2s ease-out;
+transition:2s;
+}
+.box:hover {
+border-radius: 50%;
+transform: translate(50px, 50px);
+background-color: #002060;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+body {
+font-family: sans-serif;
+padding: 5px;
+background: #f1f1f1;
+}
+/* Header/Blog Title */
+.header {
+padding: 5px;
+text-align: center;
+color: white;
+background: #002060;
+}
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: #ecab72;
+}
+/* Style the topnav links */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+color: #002060;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+float: left;
+width: 20%;
+padding: 5px;
+}
+/* middle column */
+.middlecolumn {
+float: left;
+width: 60%;
+padding: 5px;
+}
+/* Right column */
+.rightcolumn {
+float: left;
+width: 20%;
+background-color: #f1f1f1;
+padding: 5px;
+}
+/* Fake image */
+.fakeimg {
+background-color: #aaa;
+text-align: center;
+width: 100%;
+padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* Footer */
+.footer {
+padding: 5px;
+text-align: center;
+color: white;
+background: #002060;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Float layout Website</h1>
+<p>Responsive Website Layout</p>
+</div>
+<div class="topnav">
+<a href="#">Link1</a>
+<a href="#">Link2</a>
+<a href="#">Link3</a>
+<a href="#" style="float:right">Home</a>
+</div>
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+<h3>Popular Post</h3>
+<div class="fakeimg"><p>Image1</p></div>
+<p>some text ...</p>
+<div class="fakeimg"><p>Image2</p></div>
+<p>some text ...</p>
+<div class="fakeimg"><p>Image3</p></div>
+</div>
+</div>
+<div class="middlecolumn">
+  <div class="card">
+  <h2>TITLE HEADING</h2>
+  <h5>Title description</h5>
+  <div class="fakeimg" style="height:200px;">Cover Image</div>
+  <p>Some text..</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Earum cum eos deserunt ipsum at veritatis incidunt.
+  Excepturi sequi quae, aspernatur, eius dolore tempore
+  aut magni facilis aperiam consectetur nam quo?</p>
+  </div>
+  </div>
+  <div class="rightcolumn">
+  <div class="about">
+  <div class="card">
+  <h2>About Me</h2>
+  <div class="fakeimg" style="height:100px;">Image</div>
+  <p>Some text about me Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. </p>
+  </div>
+  </div>
+  <div class="follow">
+  <div class="card">
+  <h3>Follow Me</h3>
+  <p>Some text..</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="footer">
+  <h2>Footer</h2>
+  </div>
+  </body>
+  </html> -->
+
+  <!-- <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: lightblue;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(218, 216, 216, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: peachpuff;
+  }
+  .item1{
+    grid-area: 1 / 1 / span 2 / span 2;
+  }
+  .item2{
+    grid-area: 1 / 3 ;
+  }
+  .item3{
+    grid-area: 3 / 1;.
+  }
+  
+  </style>
+  </head>
+  <body>
+
+  <div class="grid-container">
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>  
+    <div class="item4">item4</div>
+    <div class="item5">item5</div>
+    <div class="item6">item6</div>
+    <div class="item7">item7</div>
+    <div class="item6">item8</div>
+    <div class="item7">item9</div>
+  </div>
+  
+  </body>
+  </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Document</title>
+  <style>
+    .grid-container{
+      display: grid;
+      margin-top: 3em;
+      margin-left: 7rem;
+      margin-right: 7rem;
+      gap: 10px;
+      padding: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-content: center;
+      align-content: center;
+    }
+    .grid-container > div{
+      /* background-color: lightslategray; */
+      border: 1px solid grey;
+      text-align: center;
+      padding: 30px 0;
+      border-radius: 7px;
+      background-color: lightcoral;
+    }
+    .item5{
+      grid-area: 2/1/span 15 / span 3;
+      background-color: rgb(255, 125, 255);
+      margin-right: 14%;
+    }
+    .item6{
+      grid-area: 2/ 4/ span 15 / span 1;
+      background-color: lightpink;
+      margin-left: -41%;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item1">New Accounts</div>
+    <div class="item2">Total Expenses</div>
+    <div class="item3">Company Value</div>  
+    <div class="item4">New Employees</div>
+    <div class="item5">Traffic Sources</div>
+    <div class="item6">Income</div>
+    <div class="item7">Income</div>
+    <div class="item8">Expenses</div>
+    <div class="item9">Spendings</div>
+    <div class="item10">Totals</div>
+  </div>
+</body>
+</html>

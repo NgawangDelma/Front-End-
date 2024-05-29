@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background: url("wallpapersden.com_blue-orange-hd-sunset-sky_3840x2160.jpg");
+    background-size: cover;
+    background-position: centers;
+
+}
+
+.whole{
+    width: 420px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, 2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, u 2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.whole h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.whole .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(168, 204, 216);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.whole .btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(92, 92, 232);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+
+}
+
+.whole .registerlink{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.registerlink p a{
+    color: rgb(237, 135, 255);
+    text-decoration: underline;
+    font-weight: 600;
+
+}
+
+.input-box input::placeholder{
+    color: rgb(193, 189, 189);
+}
+
+.whole .remember-box {
+    display: flex;
+    align-items: center;
+    font-size: 13.5px;
+    margin-bottom: 40px;
+    margin-right: 25px;
+    margin-top: -15px;
+}
+
+.whole .remember-box input[type="checkbox"] {
+    margin-right: 8px; 
+    margin-left: 25px;
+    padding-bottom: 20px;
+}
+#Forgot{
+    margin-left: 230px;
+    margin-top: -62px;
+    margin-bottom: 30px;
+}
+
+#Forgot a{
+    color: rgb(200, 123, 219);
+    font-size: 13px;
+}

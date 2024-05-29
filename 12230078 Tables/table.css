@@ -1,0 +1,17 @@
+table{
+    border: 1px solid grey;
+    margin: auto;
+    margin-top: -10px;
+}
+
+th,td{
+    border: 1px solid black;
+}
+td{
+    text-align: center;
+}
+h4{
+    text-align: center;
+    text-decoration: underline;
+
+}
